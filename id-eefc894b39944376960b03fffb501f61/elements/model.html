@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>(new model)</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>(new model)</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-eefc894b39944376960b03fffb501f61", type:"ArchimateModel", name:decodeURL("%28new+model%29"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-a794fcd0f3b14f568ef4544d6671e84f", contenttype:"Folder"});
+								dataFolders.push({id:"id-a794fcd0f3b14f568ef4544d6671e84f", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-fb5f34cc75a64f64b0c7941ec6722347", contenttype:"Folder"});
+								dataFolders.push({id:"id-fb5f34cc75a64f64b0c7941ec6722347", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-fb5f34cc75a64f64b0c7941ec6722347", contentid:"id-74ca8960835e4402a21fe54fde03e9b2", contenttype:"BusinessEvent"});
+										dataElements.push({id:"id-74ca8960835e4402a21fe54fde03e9b2", type:"BusinessEvent", specialization:decodeURL(""), name:decodeURL("Otro+componente"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-fb5f34cc75a64f64b0c7941ec6722347", contentid:"id-dcac15ebe33a41269ec03d0db432d7c7", contenttype:"BusinessObject"});
+										dataElements.push({id:"id-dcac15ebe33a41269ec03d0db432d7c7", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Componente"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-c21b2dabc4264945b63b3da0cc90f257", contenttype:"Folder"});
+								dataFolders.push({id:"id-c21b2dabc4264945b63b3da0cc90f257", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-5ffd6b4d665d4a02a6b965c5604a3fc8", contenttype:"Folder"});
+								dataFolders.push({id:"id-5ffd6b4d665d4a02a6b965c5604a3fc8", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-dfe9b84f433540159b58958449294e64", contenttype:"Folder"});
+								dataFolders.push({id:"id-dfe9b84f433540159b58958449294e64", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-f4569c9b6e224960b2349bae309618d0", contenttype:"Folder"});
+								dataFolders.push({id:"id-f4569c9b6e224960b2349bae309618d0", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-28adfc9e8b4940d18d6708ecbf8e5e28", contenttype:"Folder"});
+								dataFolders.push({id:"id-28adfc9e8b4940d18d6708ecbf8e5e28", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-28adfc9e8b4940d18d6708ecbf8e5e28", contentid:"id-722a8008991e41acb9f6087eed37bd24", contenttype:"Location"});
+										dataElements.push({id:"id-722a8008991e41acb9f6087eed37bd24", type:"Location", specialization:decodeURL(""), name:decodeURL("Location"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-073b9e815ed844269b632c6d9ed72361", contenttype:"Folder"});
+								dataFolders.push({id:"id-073b9e815ed844269b632c6d9ed72361", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-073b9e815ed844269b632c6d9ed72361", contentid:"id-d0443a0c504c45c49c80f3d694c0eca4", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"id-d0443a0c504c45c49c80f3d694c0eca4", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-74ca8960835e4402a21fe54fde03e9b2", targetid:"id-dcac15ebe33a41269ec03d0db432d7c7"});
+
+								dataFoldersContent.push({folderid:"id-eefc894b39944376960b03fffb501f61", contentid:"id-54342a8b3f6a4804ba83460368388e57", contenttype:"Folder"});
+								dataFolders.push({id:"id-54342a8b3f6a4804ba83460368388e57", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-54342a8b3f6a4804ba83460368388e57", contentid:"id-70de5cb10bda41058526dbbc22bfea82", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-70de5cb10bda41058526dbbc22bfea82", type:"ArchimateDiagramModel", name:decodeURL("Default+View"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-70de5cb10bda41058526dbbc22bfea82", contentid:"id-dcac15ebe33a41269ec03d0db432d7c7", contenttype:"BusinessObject"});
+												dataViewsContent.push({viewid:"id-70de5cb10bda41058526dbbc22bfea82", contentid:"id-74ca8960835e4402a21fe54fde03e9b2", contenttype:"BusinessEvent"});
+												dataViewsContent.push({viewid:"id-70de5cb10bda41058526dbbc22bfea82", contentid:"id-722a8008991e41acb9f6087eed37bd24", contenttype:"Location"});
+
+																		dataViewsContent.push({viewid:"id-70de5cb10bda41058526dbbc22bfea82", contentid:"id-d0443a0c504c45c49c80f3d694c0eca4", contenttype:"AssociationRelationship"});
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
