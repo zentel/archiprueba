@@ -18,9 +18,10 @@ jobs:
         id: archi
         uses: WoozyMasta/archimate-ci-image@5.0.2-1.0.4
         with:
+          debugAction: true
           archiHtmlReportEnabled: true
-          archiJasperReportEnabled: true
+          archiJasperReportEnabled: false
           archiJasperReportFormats: PDF,DOCX
-          archiCsvReportEnabled: true
-          archiExportModelEnabled: true
+          archiCsvReportEnabled: false
+          archiExportModelEnabled: false
           githubToken: ${{ secrets.GITHUB_TOKEN }}
