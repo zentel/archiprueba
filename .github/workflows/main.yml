@@ -25,3 +25,4 @@ jobs:
           archiCsvReportEnabled: false
           archiExportModelEnabled: false
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          githubPagesBranch: gh-pages
